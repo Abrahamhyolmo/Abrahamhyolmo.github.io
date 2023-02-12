@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+         <nav>
+              <ul>
+                  <li><a href="#header">Home</a></li>
+                  <li><a href="#About">About Myself</a></li>
+                  <li><a href="#Family">My Family</a></li>
+                  <li><a href="Hobbies">Hobbies</a></li>
+                  <li><a href="Contact Me">Contact Me</a></li>
+              </ul>
+         </nav>
+         <div class="header-text">
+            <p>I'm a Student</p>
+            <h1>Hello, My Name Is <br> Abraham Lama Hyolmo</h1>
+         </div>
+       </div>
+    </div>
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Abraham.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Myself</h1>
+                    <p>Hi, Its me Abraham Hyolmo. And I am currently studying at The Herald College. Here are everythings you want to know if you want my purposal.
+                    </p>
+
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>GYM</span><br>Fitness Training</li>
+                            <li><span>Others</span><br>Mass Speaking<br>Acapela Singing</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2016 - </span><br>Trainer at Tinchuli GYM</li>
+                            <li><span>2017 - 2020</span><br>Reliance College</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>S.L.C</li>
+                            <li><span>2016 - 2018</span><br>+2 Level</li>
+                            <li><span>2018 - </span><br>BIT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="Family">
+        <div class="container">
+            <h1 class="sub-title">My Family</h1>
+            <div class="Family-Members">
+                <div>
+                    <h2>My Father</h2>
+                    <img src="dads.jpg" alt="">
+                </div>
+                <div>
+                    <h3>My Mother</h3>
+                    <img src="moms.jpg" alt="">
+                </div>
+                <div>
+                    <h4>Myself</h4>
+                    <img src="myself.jpg" alt="">
+                </div>
+            </div>
+        </div>   
+
+    </div>
+
+    <div id="Hobbies">
+        <div class="container">
+            <h1 class="sub-title">My Hobbies</h1>
+            <div class="Hobbies-list">
+                <div class="Hobbies">
+                    <img src="work-1.jpg">
+                    <div class="layer">
+                        <h3>Fitness Training/Personal Trainer</h3>
+                    </div>
+                </div>
+                <div class="Hobbies">
+                    <img src="work-2.jpg">
+                    <div class="layer">
+                        <h3>Public Speaking/Singing</h3>
+                    </div>
+                </div>
+                <div class="Hobbies">
+                    <img src="work-3.jpg ">
+                    <div class="layer">
+                        <h3>Playing Guitar</h3>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> Contact@abrahamlama321@gmail.com</p><br>
+                    <p><i class="fas fa-phone-square-alt"></i>9803876138</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <p>First Name:</p><input type="text" name="Name" placeholder="First Name" required><br>               
+                        <p>Last Name:</p><input type="text" name="Name" placeholder="Last Name"required><br>
+                        <p>Your Email:</p><input type="email" name="Email" placeholder="Your Email" required><br>
+                        <p>Your Messege:</p><textarea name="Message" rows="6" placeholder="Your Message"></textarea><br>
+                        <button type="submit">submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablink = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablink){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+      
+</body>
+</html>
+
